@@ -1,0 +1,18 @@
+Evolution Game:
+
+author: Milwa
+date:   13.09.2018
+
+The rules of The Evolution Game:
+
+We start with n players at level "0" (n should be an even number). In each iteration players are randomly paired and 'fight' in pairs. The result of every 'fight' is completely random (50% / 50% chance). The winner get one level up, the loser: one level down (or stay at the zero level), there is no draw option. The level of each participant is updated, and we may start a new iteration. 
+The game goes on unitil we get the winner (at least one player reaches the max level) or a specified number of iterations were performed. Final statistics are saved to file given by the user
+
+Input parameters:
+    n - number of playerd (odd number)
+    max_level 
+    number_of_iterations
+    filename - file in which final statistics are saved 
+
+
+Two independent versions of the program: main.py and main.ipynb
