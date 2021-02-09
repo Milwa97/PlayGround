@@ -45,21 +45,7 @@ def plot_3D(x,y,z, x_label = '$t$', y_label ='$x$', z_label = '$u$', title='$u(t
     plt.show()
     
     
-
-def plot_3D(x,y,z, x_label = '$t$', y_label ='$x$', z_label = '$u$', title='$u(t,x)$', elev=15., azim=0):  
-    
-    fig = plt.figure( figsize = (10, 12))
-    
-    ax = fig.add_subplot(111, projection='3d')
-    ax.plot_surface(x, y, z, cmap = cmap, alpha = alpha)
-    ax.set_xlabel(x_label, fontsize=15);
-    ax.set_ylabel(y_label, fontsize=15);
-    ax.set_zlabel(z_label, fontsize=15);
-    ax.set_title(title, fontsize = 20);
-    ax.view_init(elev=elev, azim=azim)
-    
-    plt.show()
-    
+   
 
     
     
