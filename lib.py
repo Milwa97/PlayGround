@@ -74,3 +74,12 @@ def plot_3D_animation(x,y,z, x_label = '$t$', y_label ='$x$', z_label = '$u$', t
     for ii in range(0, 360, 5):
         ax.view_init(elev=15., azim=ii)
         fig.savefig("test_%d.png" % ii)
+        
+        
+        
+        
+        
+        
+        
+        
+        
