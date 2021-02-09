@@ -12,22 +12,26 @@ PI = np.pi
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D  
 plt.rcParams['image.cmap']='cool'  ## set a global cmap: 'cool' ,   'twilight_shifted', 'hsv', 'jet'
-cmap = 'cool'
 alpha = 0.9
 
 
 
-def plot_2D(f, x_label = '$t$', y_label = '$x$', title='$f(x,y)$'):
+def plot_2D(f,Nx,Nt, x_label = '$x$', y_label = '$t$', title='$u(t,x)$', cmap='cool'):
     
-    fig, ax = plt.subplots(figsize = (8, 8))
-    ax.imshow(f, cmap='cool', origin='lower')
+    fig, ax = plt.subplots(figsize = (8, 6))
+    
+    ax.imshow(f, cmap=cmap, aspect = 'auto')
+    
     ax.set_xlabel(x_label, fontsize=15);
     ax.set_ylabel(y_label, fontsize=15);
     ax.set_title(title, fontsize = 20) ;
+    
+    ax.set_xlim(0, Nx+1)
+    ax.set_ylim(0, Nt+1)
     plt.show()
 
 
-def plot_3D(x,y,z, x_label = '$t$', y_label ='$x$', z_label = '$u$', title='$u(t,x)$', elev=15., azim=0):  
+def plot_3D(x,y,z, x_label = '$t$', y_label ='$x$', z_label = '$u$', title='$u(t,x)$', elev=15., azim=0, cmap = 'cool'):  
     
     fig = plt.figure( figsize = (10, 12))
     ax = fig.add_subplot(111, projection='3d')
